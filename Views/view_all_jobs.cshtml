@@ -1,0 +1,13 @@
+<h1>Jobs You've Held</h1>
+<ul>
+  @foreach(var job in Model)
+  {
+    <li>@job.GetCompany()</li>
+    <li>@job.GetPosition()</li>
+    <li>@job.GetTime()</li>
+  }
+</ul>
+<p><a href="/">Add another job here.</a></p>
+<form action="/jobs_cleared" method="post">
+  <button type="submit" name="button">Clear all jobs now.</button>
+</form>
